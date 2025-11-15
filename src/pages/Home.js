@@ -3,6 +3,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+
+  const API = "https://backend-new-production-8a22.up.railway.app";
+
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -10,12 +13,12 @@ export default function Home() {
   }, []);
 
   const loadUsers = async () => {
-const result = await axios.get("backend-new-production-8a22.up.railway.app/users");
+    const result = await axios.get(`${API}/users`);
     setUsers(result.data);
   };
 
   const deleteUser = async (id) => {
-await axios.delete(`backend-new-production-8a22.up.railway.app/user/${id}`);
+    await axios.delete(`${API}/user/${id}`);
     loadUsers();
   };
 
