@@ -15,7 +15,7 @@ export default function EditUser() {
   const { name, username, email } = user;
 
   // Base URL for backend (Render)
-  const API_URL = "https://fullstack-backend-93ow.onrender.com";
+  const API_URL = "https://backend-new-production-8a22.up.railway.app";
 
   const onInputChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });

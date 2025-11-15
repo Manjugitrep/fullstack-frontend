@@ -10,12 +10,12 @@ export default function Home() {
   }, []);
 
   const loadUsers = async () => {
-const result = await axios.get("https://fullstack-backend-93ow.onrender.com/users");
+const result = await axios.get("backend-new-production-8a22.up.railway.app/users");
     setUsers(result.data);
   };
 
   const deleteUser = async (id) => {
-await axios.delete(`https://fullstack-backend-93ow.onrender.com/user/${id}`);
+await axios.delete(`backend-new-production-8a22.up.railway.app/user/${id}`);
     loadUsers();
   };
 

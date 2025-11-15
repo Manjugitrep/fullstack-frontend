@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 export default function AddUser() {
   let navigate = useNavigate();
 
-  const API_URL = "https://fullstack-backend-93ow.onrender.com";
+  const API_URL = "https://backend-new-production-8a22.up.railway.app";
 
   const [user, setUser] = useState({
     name: "",
